@@ -12,16 +12,22 @@ function Burrito() {
     .doc("burrito");
 
   // subscribe to the doc. just one line!
-  const burrito = useFirestoreDocData(burritoRef);
+  interface Burrito {
+    yummy: boolean;
+    eungjin: string;
+  }
+
+  const burrito: Burrito = useFirestoreDocData(burritoRef);
 
   // get the value from the doc
-  const isYummy = burrito.yummy;
-  const eungjin = burrito.eungjin;
+  const { yummy, eungjin } = burrito;
 
-  return <div>
-    <p>The burrito is {isYummy ? "good" : "bad"}</p>
-    <p>The eungjin is {eungjin}</p>
-  </div>
+  return (
+    <div>
+      <p>The burrito is {yummy ? "good" : "bad"}</p>
+      <p>The eungjin is {eungjin}</p>
+    </div>
+  );
 }
 
 function App() {

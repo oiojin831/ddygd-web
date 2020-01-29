@@ -3,3 +3,4 @@
 - [reactfire](https://github.com/FirebaseExtended/reactfire)
 - please add .env.development.local for local development
 - firestore ddygd-staging -> ask eungjin for access -> need gmail account
+- default prettier setting
